@@ -1,0 +1,36 @@
+/* Navbar.css */
+
+.navbar-custom {
+    background-color: #343a40 !important; /* Dark background for navbar */
+    padding: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.1px;
+  }
+  
+  .navbar-brand {
+    font-size: 3rem;
+    font-weight: bold;
+    
+  }
+  
+  
+  .nav-link {
+    color: #f8f9fa !important;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107 !important; /* Highlight with yellow on hover */
+  }
+  .navbar .nav-link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #00f7ff;
+}
+
+  

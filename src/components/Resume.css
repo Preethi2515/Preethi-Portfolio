@@ -1,0 +1,52 @@
+.resume-section {
+  background-color: #040d21;
+  color: #fff;
+}
+
+.note-card {
+  background-color: #9b5de5;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+.resume-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.resume-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-bottom: 2px solid #9b5de5;
+}
+
+.resume-download-btn {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.thank-msg {
+  margin-top: 60px;
+  font-size: 1.5rem;
+}
+
+.thanks {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.interest {
+  background-color: #f4a261;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 5px;
+}

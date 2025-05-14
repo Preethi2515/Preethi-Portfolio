@@ -1,0 +1,149 @@
+/* HERO SECTION BACKGROUND */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+.hero-bg {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding-top: 70px; /* enough space to push below navbar */
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+
+/* HIGHLIGHT TEXT COLOR */
+.highlight {
+  color: #00e6e6;
+}
+
+/* PROFILE IMAGE WRAPPER WITH GLASS EFFECT */
+.profile-wrapper {
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT ON PROFILE WRAPPER */
+.profile-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+}
+
+/* PROFILE IMAGE STYLING */
+.profile-img {
+  width: 185px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-center {
+  text-align: center;
+}
+.hero-description {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.9;
+  font-size: 1.1rem;
+}
+
+
+.hero-taglines {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.hero-taglines p {
+  margin: 0.6rem 0;
+}
+
+.highlight {
+  color: #00e6e6;
+  font-weight: 700;
+}
+/* Font and General Styling */
+.hero-text {
+  font-family: 'Space Grotesk', sans-serif;
+  max-width: 700px;
+}
+
+.hero-bg {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding-top: 100px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.hero-taglines {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.hero-taglines p {
+  margin: 0.6rem 0;
+}
+
+.highlight {
+  color: #00e6e6;
+  font-weight: 700;
+}
+
+/* Fade-In and Zoom-In Animation */
+.hero-text {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeZoomIn 1.5s forwards ease-out;
+}
+
+.hero-text:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.hero-text:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.hero-text:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.hero-text:nth-child(4) {
+  animation-delay: 1.3s;
+}
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

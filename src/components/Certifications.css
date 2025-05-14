@@ -1,0 +1,53 @@
+.certifications-section {
+  background: transparent;
+  padding: 80px 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.cert-card {
+  background-color: #d3d3d3;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #000;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 230, 230, 0.3);
+}
+
+.cert-img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer; /* Indicating that the image is clickable */
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #00e6e6;
+  border-radius: 10px;
+  transform-origin: left;
+}
+
+.cert-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cert-card-wrapper {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* .img-fluid {
+  width: 100%;
+  height: auto;
+} */

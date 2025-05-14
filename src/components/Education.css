@@ -1,0 +1,132 @@
+.education-section {
+  background: linear-gradient(to right, #141e30, #243b55);
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 50px 0;
+}
+
+.highlight {
+  color: #00e6e6;
+  font-weight: 600;
+}
+
+/* Updated card style */
+.education-card {
+   background: rgba(255, 255, 255, 0.1);/* Slightly transparent */
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Soft shadow for a lifted look */
+  backdrop-filter: blur(10px); /* More blur for a smoother look */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+  color: #f1f1f1; /* Light text for contrast */
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 230, 230, 0.3);
+  overflow: hidden;
+}
+
+.education-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Slight lift and zoom effect */
+  background: rgba(0, 230, 230, 0.2); /* Subtle cyan glow on hover */
+  box-shadow: 0 15px 40px rgba(0, 230, 230, 0.3); /* Glowing shadow */
+}
+
+.education-card .card-body {
+  padding: 0;
+}
+
+/* Title styling */
+.education-card .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00b5b5;  /* A softer teal color for better readability */
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Uppercase for more impact */
+  letter-spacing: 1px;
+}
+
+/* Subtitle Styling */
+.education-card .card-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #a0e4e4;  /* Lighter, muted cyan for contrast */
+  margin-bottom: 15px;
+}
+
+/* Text content styling */
+.education-card .card-text {
+  font-size: 1rem;
+  color: #c1c1c1;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Year and grade */
+.education-card .text-muted {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* Button Styles */
+button.btn-info {
+  background-color: #00e6e6;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn-info:hover {
+  background-color: #00b5b5;
+  color: #fff;
+  transform: scale(1.05); /* Button scale on hover */
+}
+
+button.btn-outline-info {
+  border-color: #00e6e6;
+  color: #00e6e6;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.btn-outline-info:hover {
+  background-color: #00e6e6;
+  color: #000;
+  border-color: #00b5b5;
+}
+
+/* Underline for buttons */
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #00e6e6;
+  border-radius: 10px;
+  transform-origin: left;
+  transition: width 0.3s ease;
+}
+
+/* Button hover to expand underline */
+button:hover + .underline {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 20px;
+  }
+
+  .education-card .card-title {
+    font-size: 1.2rem;
+  }
+
+  .education-card .card-subtitle {
+    font-size: 1rem;
+  }
+
+  .education-card .card-text {
+    font-size: 0.95rem;
+  }
+}
