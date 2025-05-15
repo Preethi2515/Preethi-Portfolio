@@ -64,21 +64,29 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="certifications-section py-3">
-
       <Container>
         <h2 className="text-center highlight fw-bold mb-4">My Certifications</h2>
-        <div className="underline mx-auto mb-4"></div>
+        <div className="underline mx-auto mb-5"></div>
         <div className="cert-scroll-container">
           {certificates.map((cert, idx) => (
             <div className="cert-card-wrapper" key={idx}>
               <Card className="cert-card h-100">
-                <Card.Img
-                  variant="top"
-                  src={cert.image}
-                  alt={cert.title}
-                  className="cert-img"
-                  onClick={() => handleShow(cert.image, cert.title)}
-                />
+                <div className="position-relative">
+                  <Card.Img
+                    variant="top"
+                    src={cert.image}
+                    alt={cert.title}
+                    className="cert-img"
+                  />
+                  <div className="cert-overlay">
+                    <button
+                      className="view-button"
+                      onClick={() => handleShow(cert.image, cert.title)}
+                    >
+                      View
+                    </button>
+                  </div>
+                </div>
                 <Card.Body>
                   <Card.Title className="highlight">{cert.title}</Card.Title>
                 </Card.Body>

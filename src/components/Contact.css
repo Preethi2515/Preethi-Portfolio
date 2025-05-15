@@ -12,6 +12,8 @@
 
 .contact-wrapper {
   justify-content: space-around;
+  gap: 2rem; /* add gap between columns */
+  flex-wrap: wrap; /* ensure wrapping on small screens */
 }
 
 .contact-info {
@@ -20,6 +22,8 @@
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  flex: 1 1 300px; /* responsive min width */
+  min-width: 280px;
 }
 
 .contact-info h4,
@@ -42,17 +46,31 @@
 
 .social-icons {
   margin-top: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
   color: #cbd5e1;
-  margin-right: 15px;
   font-size: 20px;
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
   color: #00f5d4;
+  cursor: pointer;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #00f5d4;
+  cursor: pointer;
 }
 
 .contact-form {
@@ -61,6 +79,8 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  flex: 1 1 300px; /* responsive min width */
+  min-width: 280px;
 }
 
 .contact-form label {
@@ -84,27 +104,50 @@
   border: none;
   margin-top: 10px;
   width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
 }
 
 .submit-btn:hover {
   opacity: 0.85;
 }
-/* Contact.css */
 
-/* Styling the social media links */
-.social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
+/* Highlight and underline styling */
+.highlight {
+  color: #00e6e6; /* highlight color */
 }
 
-.social-link {
-  text-decoration: none;
-  color: #007bff;
-  font-size: 1.5rem;
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: #00e6e6;
+  margin-top: 0.5rem;
+  border-radius: 2px;
 }
 
-.social-link:hover {
-  color: #0056b3;
-  cursor: pointer;
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+
+  .underline {
+    width: 60px;
+  }
 }

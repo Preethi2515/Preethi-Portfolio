@@ -5,10 +5,12 @@
 }
 
 .cert-card {
+  position: relative;
   background-color: #d3d3d3;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
   color: #000;
 }
 
@@ -21,24 +23,60 @@
   height: 250px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
-  cursor: pointer; /* Indicating that the image is clickable */
+  transition: 0.3s;
+  cursor: pointer; /* Added cursor for clarity */
 }
 
-.underline {
-  width: 80px;
-  height: 4px;
+.cert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+.cert-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.view-button {
   background-color: #00e6e6;
-  border-radius: 10px;
-  transform-origin: left;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
+.view-button:hover {
+  background-color: #00cccc;
+}
+
+/* Updated horizontal scroll container */
 .cert-scroll-container {
   display: flex;
   overflow-x: auto;
   padding: 10px;
   gap: 20px;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.cert-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .cert-card-wrapper {
@@ -46,8 +84,3 @@
   flex-shrink: 0;
   scroll-snap-align: start;
 }
-
-/* .img-fluid {
-  width: 100%;
-  height: auto;
-} */
