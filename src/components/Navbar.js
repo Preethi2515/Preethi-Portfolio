@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link } from "react-scroll";
+import { FaHome, FaUser, FaGraduationCap, FaTools, FaProjectDiagram, FaCertificate, FaEnvelope } from "react-icons/fa";
 import "./Navbar.css";
 
 const CustomNavbar = () => {
-  const [expanded, setExpanded] = useState(false); // track toggle state
+  const [expanded, setExpanded] = useState(false);
 
   const handleResumeClick = () => {
     window.open("/Preethi_S_Resume.pdf", "_blank");
-    setExpanded(false); // close navbar on resume click
+    setExpanded(false);
   };
 
-  // close navbar on any link click
   const handleNavClick = () => {
     setExpanded(false);
   };
 
-  // Dynamic offset based on screen width (adjust the values as needed)
+  // Use consistent offset for all screen sizes, adjust if needed
   const getOffset = () => (window.innerWidth < 768 ? -400 : -80);
+
 
   return (
     <Navbar
@@ -25,8 +26,8 @@ const CustomNavbar = () => {
       variant="dark"
       expand="lg"
       sticky="top"
-      className="py-4 px-4"
-      expanded={expanded} // control expanded state
+      className="navbar-custom py-3 px-4"
+      expanded={expanded}
     >
       <Container>
         <Navbar.Brand className="fs-2 fw-bold text-info">Preethi S</Navbar.Brand>
@@ -40,77 +41,91 @@ const CustomNavbar = () => {
               to="home"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
-              onClick={handleNavClick} // close on click
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
+              onClick={handleNavClick}
             >
-              Home
+              <FaHome className="nav-icon" /> Home
             </Link>
             <Link
               to="about"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              About
+              <FaUser className="nav-icon" /> About
             </Link>
             <Link
               to="education"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              Education
+              <FaGraduationCap className="nav-icon" /> Education
             </Link>
             <Link
               to="skills"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              Skills
+              <FaTools className="nav-icon" /> Skills
             </Link>
             <Link
               to="projects"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              Projects
+              <FaProjectDiagram className="nav-icon" /> Projects
             </Link>
             <Link
               to="certifications"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              Certifications
+              <FaCertificate className="nav-icon" /> Certifications
             </Link>
-
             <Link
               to="contact"
               smooth={true}
               duration={500}
-              className="nav-link fs-5 mx-3"
+              spy={true}
               offset={getOffset()}
+              activeClass="active"
+              className="nav-link fs-5 mx-3"
               onClick={handleNavClick}
             >
-              Contact
+              <FaEnvelope className="nav-icon" /> Contact
             </Link>
+
             <Button
               variant="outline-info"
               className="fs-6 mx-3"
-              onClick={handleResumeClick} // closes navbar inside handler
+              onClick={handleResumeClick}
             >
               View Resume
             </Button>

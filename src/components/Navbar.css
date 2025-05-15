@@ -1,36 +1,73 @@
 /* Navbar.css */
 
 .navbar-custom {
-    background-color: #343a40 !important; /* Dark background for navbar */
-    padding: 15px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #343a40 !important;
+  padding: 15px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.1px;
-  }
-  
-  .navbar-brand {
-    font-size: 3rem;
-    font-weight: bold;
-    
-  }
-  
-  
-  .nav-link {
-    color: #f8f9fa !important;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    margin-left: 20px;
-  }
-  
-  .nav-link:hover {
-    color: #ffc107 !important; /* Highlight with yellow on hover */
-  }
-  .navbar .nav-link {
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #17d4d9, #00e6e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 230, 230, 0.4);
+  transition: background-position 0.5s ease, text-shadow 0.3s ease, color 0.3s ease;
+  background-size: 200% 100%;
+  background-position: left;
   cursor: pointer;
+  margin-right: 3rem; /* Space between brand and nav links */
+}
+
+.navbar-brand:hover {
+  background-position: right;
+  text-shadow: 0 4px 10px rgba(0, 230, 230, 0.8);
+  -webkit-text-fill-color: transparent;
+  color: #00e6e6 !important;
+}
+
+.nav-link {
+  color: #f8f9fa !important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: #00e6e6 !important; /* Bright teal on hover */
+  border-bottom: 3px solid #00e6e6;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover {
-  color: #00f7ff;
+.nav-link.active {
+  color: #00e6e6 !important;
+  border-bottom: 3px solid #00e6e6;
+  font-weight: 600;
 }
 
-  
+.nav-link.active .nav-icon {
+  color: #00e6e6 !important;
+}
+
+/* Navbar collapse nav margin (alternate spacing if needed) */
+.navbar-collapse .nav {
+  margin-left: 3rem;
+}
+
+/* Toggle button color */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
