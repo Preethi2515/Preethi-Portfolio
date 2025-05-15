@@ -67,6 +67,16 @@ const CustomNavbar = () => {
               Education
             </Link>
             <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="nav-link fs-5 mx-3"
+              offset={getOffset()}
+              onClick={handleNavClick}
+            >
+              Skills
+            </Link>
+            <Link
               to="projects"
               smooth={true}
               duration={500}

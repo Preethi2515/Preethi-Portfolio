@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+.skills-section {
+  background-color: #0b0e19;
+  padding: 80px 40px; /* increased padding */
+  min-height: 100vh;
+  color: #bbaaff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.skills-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00e6e6;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideDown 1s ease-out forwards;
+}
+
+/* Underline effect */
+.skills-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #00e6e6;
+  border-radius: 10px;
+  margin: 0.5rem auto 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawUnderline 1s ease-out 0.6s forwards;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* fixed min width */
+  gap: 3rem; /* balanced gap */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; /* some horizontal padding */
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #ffffff, #f0f0ff);
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 12px 24px rgba(0, 230, 230, 0.3);
+  transition: 
+    background-color 0.4s ease, 
+    box-shadow 0.4s ease,
+    transform 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.skill-card:hover {
+  background-color: rgba(0, 230, 230, 0.15);
+  box-shadow: 0 0 30px rgba(0, 230, 230, 0.9);
+  transform: translateY(-10px) scale(1.05);
+  border-color: #00e6e6;
+}
+
+.skill-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 4px rgba(0, 230, 230, 0.7));
+}
+
+.skill-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00e6e6;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Animation Keyframes */
+@keyframes drawUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

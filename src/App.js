@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // AOS CSS for animations
 import './App.css';
 import Certifications from "./components/Certifications";
+import Skills from "./components/Skills";
 
 
 function App() {
@@ -46,6 +47,11 @@ function App() {
         </div>
       </Element>
 
+<Element name="skills">
+        <div data-aos="fade-up">
+          <Skills />
+        </div>
+      </Element>
       {/* Projects Section */}
       <Element name="projects">
         <div data-aos="zoom-in">
